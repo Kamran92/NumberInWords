@@ -204,7 +204,9 @@ var button = document.querySelector("button");
 var input = document.querySelector("input");
 button.addEventListener("click", function() {
 	if (input.value == "") {
-		alert("Введите цифру до миллиона!!!");
+		alert("Введите цифру от 0 до миллиона!!!");
+	} else if (Number(input.value) < 0) {
+		alert("Введите положительную цифру до миллиона!!!");
 	} else {
 		alert(printsFromZeroToMillion(Number(input.value)));
 	};
